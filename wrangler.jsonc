@@ -43,30 +43,33 @@
       "new_sqlite_classes": ["OnboardingChatAgent"],
     },
   ],
-  "triggers": {
-    "crons": ["*/15 * * * *"],
-  },
+  // Every-15-min background job (rank checks / site audits) DISABLED to protect
+  // the low DataForSEO balance — nothing spends without an explicit request.
+  // Re-enable by uncommenting once the credit is topped up.
+  // "triggers": {
+  //   "crons": ["*/15 * * * *"],
+  // },
   "kv_namespaces": [
     {
       "binding": "KV",
-      "id": "4abd52f3f2c549ac83cc2cb4ceec8620",
+      "id": "72cb2785c95f41c8a9adf3261fc2c2f8",
     },
     {
       "binding": "OAUTH_KV",
-      "id": "bd1759494309474a9b423b029967b0db",
+      "id": "5709eb4796a9424b8b35702c04e5450e",
     },
   ],
   "d1_databases": [
     {
       "binding": "DB",
-      "database_name": "open-seo",
-      "database_id": "37bee90a-e1aa-404f-b01e-b0d1d479bda1",
+      "database_name": "open-seo-aicoder88",
+      "database_id": "382e5c10-5c01-4949-8392-137ebb07c20e",
       "migrations_dir": "drizzle",
     },
   ],
   "r2_buckets": [
     {
-      "bucket_name": "open-seo",
+      "bucket_name": "open-seo-aicoder88",
       "binding": "R2",
     },
   ],
