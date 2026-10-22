@@ -458,7 +458,7 @@ function McpSection() {
                 <span className="itc-terminal-dot" />
                 <span className="itc-terminal-dot" />
               </span>
-              <span className="itc-terminal-label">claude · openseo mcp</span>
+              <span className="itc-terminal-label">Illustrative figures, not measured</span>
             </div>
             <pre>
               <code>

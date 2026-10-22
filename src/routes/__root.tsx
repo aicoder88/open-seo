@@ -38,6 +38,7 @@ import { captureRedditConversionEvent } from "@/serverFunctions/redditConversion
 export const Route = createRootRoute({
   head: () => ({
     meta: [
+      { name: "robots", content: "noindex, nofollow" },
       {
         title: "OpenSEO",
       },
@@ -155,7 +156,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
     import.meta.env.DEV && import.meta.env.VITE_SHOW_DEVTOOLS !== "false";
 
   return (
-    <html suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
       <head>
         <script
           dangerouslySetInnerHTML={{ __html: themePreferenceInitScript }}

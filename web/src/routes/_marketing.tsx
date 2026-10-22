@@ -10,8 +10,6 @@ import { SiteFooter } from "@/components/site-footer";
 import { featureGroups } from "@/lib/feature-pages";
 
 const GITHUB_REPO = "every-app/open-seo";
-// Used if GitHub is unreachable at build time so the header never renders empty.
-const FALLBACK_STAR_COUNT = "2.1k";
 
 // Round to the nearest hundred and render in thousands, e.g. 3140 -> "3.1k".
 function formatStarCount(count: number): string {
@@ -19,7 +17,7 @@ function formatStarCount(count: number): string {
   return `${(Math.round(count / 100) / 10).toString()}k`;
 }
 
-async function fetchGithubStarCount(): Promise<string> {
+async function fetchGithubStarCount(): Promise<string | null> {
   try {
     const res = await fetch(`https://api.github.com/repos/${GITHUB_REPO}`, {
       headers: {
@@ -28,25 +26,25 @@ async function fetchGithubStarCount(): Promise<string> {
         "User-Agent": "openseo-landing",
       },
     });
-    if (!res.ok) return FALLBACK_STAR_COUNT;
+    if (!res.ok) return null;
     const data = (await res.json()) as { stargazers_count?: number };
     return typeof data.stargazers_count === "number"
       ? formatStarCount(data.stargazers_count)
-      : FALLBACK_STAR_COUNT;
+      : null;
   } catch {
-    return FALLBACK_STAR_COUNT;
+    return null;
   }
 }
 
 // Memoized for the duration of a build so prerendering every marketing page
 // only hits GitHub once instead of once per page.
-let starCountPromise: Promise<string> | null = null;
-function loadGithubStarCount(): Promise<string> {
+let starCountPromise: Promise<string | null> | null = null;
+function loadGithubStarCount(): Promise<string | null> {
   starCountPromise ??= fetchGithubStarCount();
   return starCountPromise;
 }
 
-function getMobileNavItems(githubStarCount: string) {
+function getMobileNavItems(githubStarCount: string | null) {
   return [
     {
       label: "Product",
@@ -68,7 +66,7 @@ function getMobileNavItems(githubStarCount: string) {
       label: "Community",
       links: [
         {
-          label: `GitHub ${githubStarCount}`,
+          label: githubStarCount ? `GitHub ${githubStarCount}` : "GitHub",
           href: "https://github.com/every-app/open-seo",
         },
       ],
@@ -192,12 +190,12 @@ function MarketingLayout() {
                 href="https://github.com/every-app/open-seo"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label={`GitHub, ${githubStarCount} stars`}
+                aria-label={githubStarCount ? `GitHub, ${githubStarCount} stars` : "GitHub"}
                 className="hidden h-9 items-center gap-1.5 px-2 text-sm font-semibold text-neutral-600 transition-colors hover:text-neutral-900 md:inline-flex"
               >
                 <GitHubIcon size={16} />
                 <span>GitHub</span>
-                <span className="text-neutral-500">{githubStarCount}</span>
+                {githubStarCount && <span className="text-neutral-500">{githubStarCount}</span>}
               </a>
               <a
                 href="https://app.openseo.so/sign-in"

@@ -3,63 +3,15 @@ title: "Google Search Console MCP Server: No Google Cloud Setup"
 description: Connect Google Search Console to Claude, Cursor, or any MCP client — no Google Cloud project needed. Query clicks, impressions, CTR, position, and indexing.
 ---
 
-Most Google Search Console (GSC) MCP servers are open source, but they take a lot of effort to set up. You need to create a Google Cloud project, enable an API, build an OAuth client, download a `credentials.json`, then keep a local server running. OpenSEO handles the Google connection for you. You sign up, connect your property, and start asking.
+OpenSEO's hosted MCP server connects Google Search Console to your AI client through OpenSEO's own Google app, so you do not create a Google Cloud project. You sign up, connect your property, and start asking.
 
 ## Setup: no Google Cloud project
 
 1. Sign up for OpenSEO ($10/month).
-2. Go through the onboarding. When prompted, click **Connect Search Console** and pick your property.
-3. Add the OpenSEO MCP endpoint to your client (steps below) and approve the OpenSEO login when prompted.
+2. During onboarding, click **Connect Search Console** and pick your property.
+3. Add the hosted MCP server, `https://app.openseo.so/mcp`, to your AI client and approve the OpenSEO login when prompted.
 
-The hosted MCP server URL is:
-
-```txt
-https://app.openseo.so/mcp
-```
-
-### Claude Code
-
-```bash
-claude mcp add --transport http --scope user openseo https://app.openseo.so/mcp
-```
-
-### Claude Desktop
-
-1. Open Settings → Connectors.
-2. Click **Add custom connector**.
-3. Paste `https://app.openseo.so/mcp`.
-
-### Cursor
-
-1. Open Cursor Settings → Tools & Integrations → MCP Tools.
-2. Click **New MCP Server** (this opens `mcp.json`) and add:
-
-```json
-{
-  "mcpServers": {
-    "openseo": {
-      "url": "https://app.openseo.so/mcp"
-    }
-  }
-}
-```
-
-### Codex CLI
-
-```bash
-codex mcp add openseo --url https://app.openseo.so/mcp
-```
-
-Any other MCP client works the same way: add `https://app.openseo.so/mcp` as a remote server and sign in. Full setup and troubleshooting live in the [MCP docs](/docs/mcp).
-
-### The DIY way (every other GSC MCP)
-
-1. Create a Google Cloud project
-2. Enable the Search Console API
-3. Configure the OAuth consent screen
-4. Create OAuth client credentials
-5. Download `credentials.json`
-6. Install and run a local MCP server
+The [MCP docs](/docs/mcp) are the single source for client-specific steps, troubleshooting, and any plan requirements your AI client has for custom connectors.
 
 ## Things to actually ask it
 

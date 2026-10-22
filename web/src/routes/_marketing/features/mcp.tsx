@@ -45,6 +45,24 @@ const toolCategories = [
     ],
   },
   {
+    label: "Local business data",
+    tools: [
+      {
+        title: "Search local businesses",
+        description: "Find businesses near a set of coordinates.",
+      },
+      {
+        title: "Local SERP results",
+        description: "Check Google Maps and Local Finder results for a query.",
+      },
+      {
+        title: "Business Q&A",
+        description:
+          "Read the questions and answers on a Google Business profile.",
+      },
+    ],
+  },
+  {
     label: "Search Console",
     tools: [
       {
@@ -170,7 +188,7 @@ function McpPage() {
 
       <section className="mt-12">
         <h2 className="text-xl font-semibold">Available tool groups</h2>
-        <div className="mt-5 grid gap-x-8 gap-y-8 md:grid-cols-3">
+        <div className="mt-5 grid gap-x-8 gap-y-8 md:grid-cols-2">
           {toolCategories.map((category) => (
             <div key={category.label}>
               <h3 className="text-xs font-semibold uppercase tracking-wide text-neutral-500">

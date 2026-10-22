@@ -7,7 +7,7 @@ Open source is the future of the internet.
 
 Open source means that the code for an application is freely available. Anyone can use the code how they wish.
 
-Historically, SEO tools have been able to raise prices and let the user experience degrade because people had no other options. Open source forces companies to do what's best for the community. Otherwise, angry users can fork the codebase and provide a better service.
+Open source lets users inspect the code and fork it if they disagree with where a project is going. In our view, that gives a company a reason to listen to its community.
 
 Open source puts the power in the hands of the users.
 
@@ -24,9 +24,9 @@ If you already self-host open source products, you already know the many benefit
 
 ### Why does open source matter even if you're using OpenSEO's SaaS?
 
-#### Open source products are higher quality
+#### Open source lets users fix problems
 
-Open source products can be much higher quality than closed source alternatives.
+Open source can help quality when users are able to report and fix problems.
 
 Most apps suffer from "paper cuts", or small annoying bugs that are not worth it for the company to fix. If a user encounters one of these problems, they can fix the code themselves and contribute back to the application.
 
@@ -38,7 +38,7 @@ A company open sourcing their code puts a flag in the sand saying, "We are going
 
 Anyone can [self-host OpenSEO](https://github.com/every-app/open-seo) and use it at cost for themselves.
 
-Since our code is open source, other companies could try to provide the same service for cheaper. This is a check, so we cannot just keep charging more and more. We need to offer the hosted service at a fair price so that customers are happy to pay for it because it gives them so much value.
+Since our code is open source, other companies could try to provide the same service for cheaper. This is a check, so we cannot just keep charging more and more. Because the code is public, the hosted service has to earn its place against self-hosting.
 
 ##### Transparency
 
@@ -80,7 +80,7 @@ But, since the code for the application is open source, it means that you are no
 
 ## Where does OpenSEO get its data?
 
-OpenSEO uses [DataForSEO](https://dataforseo.com/) as its main data source. They have been in business for almost 10 years and are considered the gold standard for pay-by-usage SEO data. They have quality SEO data for almost every workflow and they are very reliable.
+OpenSEO uses [DataForSEO](https://dataforseo.com/) as its main data source. It provides pay-by-usage SEO data through an API, which OpenSEO uses for keyword research, rank tracking, backlinks, and site audits.
 
 There are other data providers for more specific tasks like SERP, or search engine results page, which we may support in the future, but for simplicity's sake, DataForSEO is our main provider right now.
 
@@ -98,7 +98,7 @@ If you love your current solution, you should probably just stick with that. But
 
 ## AI native: More than a replacement for other SEO tools
 
-OpenSEO is both open source and more affordable than alternatives. But, we do not plan for these to be the only things different about the product.
+OpenSEO is open source and can be self-hosted. But, we do not plan for these to be the only things different about the product.
 
 Many AI-native SEO tools strive to automate SEO as a job function. This is hype. SEO is about coming up with a better strategy than your competitors. If every company is using the same AI agent product, there is no edge.
 

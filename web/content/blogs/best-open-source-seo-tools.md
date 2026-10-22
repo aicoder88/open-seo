@@ -7,7 +7,7 @@ date: "2026-06-05"
 
 There are a lot of open source SEO projects on GitHub, but only a handful are mature enough to rely on. This guide covers those, plus a few honorable mentions worth watching or testing.
 
-In the past, open source SEO tools struggled because they lacked quality data. Beyond auditing, most SEO tasks have a cost, so most of the projects in this guide aren't totally free. For example, rank tracking requires SERP results from around the world. Coming up with a content strategy means you need accurate search volumes and backlink indexes. Most of the tools in this list rely on paid third-party services, but they still cost far less than the equivalent legacy SaaS tools.
+In the past, open source SEO tools struggled because they lacked quality data. Beyond auditing, most SEO tasks have a cost, so most of the projects in this guide aren't totally free. For example, rank tracking requires SERP results from around the world. Coming up with a content strategy means you need accurate search volumes and backlink indexes. Most of the tools in this list rely on paid third-party services.
 
 Note: OpenSEO publishes this guide, and OpenSEO is one of the tools listed, as the project has 2,000+ stars on GitHub. We have tried to make this useful even if you never touch it. We love open source and think it's the future of SEO tools: [openseo.so/open-source-seo](/open-source-seo).
 
@@ -21,13 +21,13 @@ Note: OpenSEO publishes this guide, and OpenSEO is one of the tools listed, as t
 | [LibreCrawl](https://github.com/PhialsBasement/LibreCrawl) | 681   | Site crawling and SEO audits                                                       | Free                                               | Desktop or web                     |
 | [SEOMachine](https://github.com/TheCraigHewitt/seomachine) | 7.1k  | SEO content writing inside Claude Code                                             | Anthropic API usage                                | Clone the repo, run in Claude Code |
 
-_Star counts are updated monthly. Last updated June 5, 2026._
+_Star counts are a snapshot as of June 5, 2026._
 
 ## OpenSEO
 
 OpenSEO is an open source alternative to Semrush and Ahrefs, built to be the only SEO tool that companies or small agencies need. It covers keyword research, rank tracking, backlinks, site audits, AI brand visibility, and an AI search prompt explorer. See them all on the [features page](/features).
 
-It relies on [DataForSEO](https://dataforseo.com), a paid service, which is the gold standard for SEO data with pay-as-you-go pricing. Many features cost money to run, but far less than a legacy SaaS seat, and the [pricing is published in the repo](https://github.com/every-app/open-seo#seo-api-cost-reference).
+It relies on [DataForSEO](https://dataforseo.com), a paid service, which sells SEO data with pay-as-you-go pricing. Many features cost money to run, and the [pricing is published in the repo](https://github.com/every-app/open-seo#seo-api-cost-reference).
 
 OpenSEO also has an [MCP server](/docs/mcp) and AI skills, so you can use Claude Code, Codex, or OpenClaw to handle tedious SEO work like a first pass of keyword research, then dig into the results in the OpenSEO UI. That is different from pointing an agent at DataForSEO's MCP directly. You can save data to your OpenSEO account through the MCP, like tags for clustering keywords, and you can ask the agent for a link to view its research in OpenSEO instead of trusting whatever it reports back.
 
@@ -71,4 +71,4 @@ One clarification, since it shows up on other lists: seojuice.com is not open so
 
 If you want one open source tool that covers most of SEO, start with OpenSEO. Self-host it with Docker or Cloudflare Workers, or use the hosted version at [openseo.so](https://openseo.so) if you would rather not run it yourself.
 
-We will keep this guide current. If there is an open source SEO project you love that we did not cover, email us at ben@openseo.so and we will test it and consider adding it.
+If there is an open source SEO project you love that we did not cover, email us at ben@openseo.so and we will test it and consider adding it.

@@ -120,6 +120,14 @@ function Pricing() {
           Deploy OpenSEO yourself via Docker or Cloudflare Workers. Bring your
           own API keys and pay DataForSEO and other API providers directly.
         </p>
+        <p className="mt-3 text-sm leading-6 text-[var(--color-brand-muted)]">
+          <a
+            href="https://github.com/every-app/open-seo#seo-api-cost-reference"
+            className="font-medium text-neutral-950 underline underline-offset-4"
+          >
+            SEO API cost reference
+          </a>
+        </p>
         <a
           href="https://github.com/every-app/open-seo"
           target="_blank"

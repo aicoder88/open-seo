@@ -62,6 +62,8 @@ That can shape your strategy. If a competitor gets traffic from a specific page 
 
 For a focused workflow, use the [competitor analysis skill](/docs/skills/competitor-analysis). If you are still figuring out which domains matter, start with the broader [competitive landscape skill](/docs/skills/competitive-landscape).
 
+Before you compare rivals, check a site's estimated traffic, organic keywords, and top pages in [Domain Overview](/features/domain-overview).
+
 ![OpenSEO domain overview showing top pages, keywords, and estimated traffic](/blog/seo-for-startups/domain-overview.png)
 
 ### Keyword Research
@@ -72,6 +74,8 @@ It also helps map a market. If you search a seed phrase like "best crm for," the
 
 For a repeatable workflow, use the [keyword research skill](/docs/skills/keyword-research). When you have a useful list of ideas, use the [keyword clustering skill](/docs/skills/keyword-clustering) to group them into page targets.
 
+When you are ready to choose topics, [research keywords](/features/keyword-research) and inspect the live results beside the metrics.
+
 ![OpenSEO keyword research view showing related or suggested keywords for a seed term](/blog/seo-for-startups/keyword-research.png)
 
 ### Backlink Analysis
@@ -81,6 +85,8 @@ Backlink analysis shows which websites link to a specific website.
 When you look at who links to competitors, you start to see which publications, directories, newsletters, and communities matter in the market. You can also see why certain companies are treated as credible. Sometimes they earn attention through PR. Sometimes it is partnerships, original research, or a useful tool that people keep citing.
 
 Those links can tell you how attention moves through a market.
+
+To see who links to a competitor, [check their backlinks](/features/backlink-checker) and note the sources worth studying.
 
 ![OpenSEO backlink analysis showing referring domains or top backlinks for a competitor](/blog/seo-for-startups/backlink-analysis.png)
 
@@ -99,6 +105,8 @@ They play a big role in whether someone clicks. A good title matches the search,
 [Google Search Console](https://search.google.com/search-console/about) is your source of truth for how your site is performing in Google Search.
 
 It helps you see what queries you show up for, which pages get impressions and clicks, whether Google is indexing your pages, and what crawl or coverage issues need attention.
+
+To compare your own search data with those findings, [connect Search Console over MCP](/google-search-console-mcp) and ask your agent which queries and pages to review.
 
 If you're new to it, Google's docs are worth reading:
 

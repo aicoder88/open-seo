@@ -13,7 +13,7 @@ const BLOG_CONTENT_DIR = join(__dirname, "../content/blogs");
 const DOCS_CONTENT_DIR = join(__dirname, "../content/docs");
 
 const DEFAULT_SITE_URL = "https://openseo.so";
-const SITE_URL = (process.env.SITE_URL ?? DEFAULT_SITE_URL).replace(/\/+$/, "");
+const SITE_URL = (process.env.SITE_URL ?? process.env.VITE_SITE_URL ?? DEFAULT_SITE_URL).replace(/\/+$/, "");
 
 const STATIC_PATHS = [
   "/",
@@ -66,7 +66,7 @@ function getContentEntries(
           pathSegments.length > 0
             ? `${basePath}/${pathSegments.join("/")}`
             : basePath,
-        lastmod: statSync(entryPath).mtime.toISOString(),
+        lastmod: null,
       },
     ];
   });
@@ -112,6 +112,7 @@ function main() {
 
   const sitemapPath = join(DIST_DIR, "sitemap.xml");
   writeFileSync(sitemapPath, sitemapXml);
+  writeFileSync(join(DIST_DIR, "robots.txt"), `User-agent: *\nDisallow:\nSitemap: ${SITE_URL}/sitemap.xml\n`);
 
   console.log(`Generated sitemap with ${sorted.length} URLs at ${sitemapPath}`);
 }

@@ -99,7 +99,7 @@ export const featurePages = {
       {
         question: "Can I use OpenSEO as a free keyword research tool?",
         answer:
-          "OpenSEO is open source and can be self-hosted. The managed app also keeps keyword research tied to transparent usage instead of a large fixed subscription to a closed SEO suite.",
+          "OpenSEO's code is open source, so you can self-host it at no software cost. Keyword data comes from a paid data API, so self-hosting needs your own API keys and you pay that provider for usage. The managed app needs a subscription.",
       },
       {
         question: "Does OpenSEO show live search results?",
@@ -324,7 +324,7 @@ export const featurePages = {
       {
         question: "How does this compare to Semrush Domain Overview?",
         answer:
-          "OpenSEO covers the core of the same report (estimated traffic, organic keywords, top keywords, and top pages) without a triple-digit monthly seat. OpenSEO is open source, so you can self-host it, and the managed app is $10/month and includes usage credits.",
+          "OpenSEO covers the core of the same report (estimated traffic, organic keywords, top keywords, and top pages). OpenSEO is open source, so you can self-host it, and the managed app is $10/month and includes usage credits.",
       },
       {
         question: "Can OpenSEO help with competitor keyword analysis?",

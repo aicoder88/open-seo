@@ -88,6 +88,8 @@ OpenSEO MCP exposes tools for SEO research workflows:
 - Read first-party Google Search Console performance (clicks, impressions, CTR, position).
 - Inspect index status, crawl, and canonical for specific URLs (up to 10 per call).
 
+[Self-hosting guide](https://github.com/every-app/open-seo#self-hosting)
+
 ## What to do after setup
 
 Once OpenSEO MCP is connected, [set up OpenSEO Agent Skills](/docs/skills/setup). MCP gives your agent access to OpenSEO data. Skills are separate `SKILL.md` files that tell your agent how to use that data for specific SEO jobs.

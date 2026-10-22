@@ -22,7 +22,7 @@ const ROWS: { label: string; cells: Cell[] }[] = [
     label: "Setup",
     cells: [
       { text: "Simple, guided onboarding", tone: "positive" },
-      { text: "~30 min in the Google Cloud console" },
+      { text: "Google Cloud console setup; time varies" },
       { text: "Account + connector setup" },
     ],
   },
@@ -42,7 +42,7 @@ const ROWS: { label: string; cells: Cell[] }[] = [
         tone: "positive",
       },
       { text: "Free (your time + your own quota)" },
-      { text: "Paid or limited free tier", tone: "negative" },
+      { text: "Depends on the provider's pricing" },
     ],
   },
   {
@@ -69,7 +69,7 @@ const ROWS: { label: string; cells: Cell[] }[] = [
     cells: [
       { text: "Yes", tone: "positive" },
       { text: "Yes", tone: "positive" },
-      { text: "No", tone: "negative" },
+      { text: "Depends on the provider" },
     ],
   },
 ];
